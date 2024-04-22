@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Fixes the issue with apache2 server
-# Star apatche to return Hello Holberton
+# Start apatche to return Hello Holberton
 sudo service apache2 start

@@ -23,7 +23,7 @@ SERVER_CONFIG=\
 	}
 
 	if (\$request_filename ~ redirect_me){
-		rewrite ^ https://github.com/flintstoneobed permanent;
+		rewrite ^ https://github.com/flintstoneobed/models permanent;
 	}
 
 	error_page 404 /404.html;

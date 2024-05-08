@@ -1,7 +1,13 @@
-#!/usr/bin/env bash
-# Fixes the nginx listening port and reloads the nginx master process
-sed -i 's/listen 8080/listen 80/g' /etc/nginx/sites-enabled/default
-sed -i 's/listen \[::\]:8080/listen \[::\]:80/g' /etc/nginx/sites-enabled/default
-pgrep nginx -o > /run/nginx.pid
-nginx -s reload
-echo '' > /run/nginx.pid
+#!/usr/bin/env bash                                                                                                                                       
+# fix nginx listening on port 80                                                                                                                          
+# Go to sites-enabled folder for Nginx                                                                                                                    
+cd /etc/nginx/sites-enabled/ || exit;
+
+# Delete the default file                                                                                                                               
+rm default;
+
+# Create symbolic link to the deafult file in sites-available                                                                                             
+ln -s /etc/nginx/sites-available/default default;
+
+# Restart Nginx                                                                                                                                           
+service nginx restart 

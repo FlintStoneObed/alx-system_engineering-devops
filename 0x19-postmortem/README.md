@@ -1,3 +1,5 @@
+![image](https://github.com/FlintStoneObed/alx-system_engineering-devops/assets/141341733/13813a82-ae75-43d1-a6e4-7c166092bb10)
+
 AN ALX POSTMORTEM: 5-DAY WEBSITE OUTAGE DUE TO UPGRADE ISSUES
 
 Issue Summary
